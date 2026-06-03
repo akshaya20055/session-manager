@@ -87,6 +87,13 @@ The API is available at `http://127.0.0.1:8000`.
 - `ended_at`: nullable datetime
 - `created_at`: datetime
 
+## Concurrent Session Handling
+
+- Duplicate `ACTIVE` sessions are prevented for the same candidate.
+- Validation occurs before session creation.
+- The current implementation is suitable for development and learning purposes.
+- Production systems may require database locking or distributed coordination for high concurrency.
+
 ## Tests
 
 Run the test suite:
